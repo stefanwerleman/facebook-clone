@@ -11,10 +11,10 @@
 
 #### Back-end
 * Server
-   * NodeJS and ExpressJS
+   * **NodeJS** and **ExpressJS**
 * database
-   * MongoDB (No SQL)
-   
+   * **MongoDB** (No SQL)
+
 ### How to run the app.
 
 ### Features
