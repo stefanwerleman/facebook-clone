@@ -15,6 +15,6 @@
 * database
    * **MongoDB** (No SQL)
 
-# How to run the app.
+# How to run the app:
 
-# Features
+# Features:
