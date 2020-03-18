@@ -1,7 +1,7 @@
 # Instagram Clone
 #### A basic Instagram clone to demonstrate and practice my full stack skills (client, server, and database).
 
-### Tools Utilized:
+# Tools Utilized:
 #### Front-end
 * HTML/CSS/JavaScript
 * CSS Skeleton
@@ -15,6 +15,6 @@
 * database
    * **MongoDB** (No SQL)
 
-### How to run the app.
+# How to run the app.
 
-### Features
+# Features
