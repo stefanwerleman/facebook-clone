@@ -1,5 +1,5 @@
-# Instagram Clone
-#### A basic Instagram clone to demonstrate and practice my full stack skills (client, server, and database).
+# Facebook Clone
+#### A basic Facebook clone to demonstrate and practice my full stack skills (client, server, and database).
 
 # Tools Utilized:
 #### Front-end
