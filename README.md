@@ -1,5 +1,5 @@
 # Facebook Clone
-#### A basic Facebook clone to demonstrate and practice my full stack skills (client, server, and database).
+#### A basic Facebook timeline page to demonstrate and practice my full stack skills (client, server, and database).
 
 # Tools Utilized:
 #### Front-end
