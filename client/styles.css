@@ -42,6 +42,7 @@
 
 .submit
 {
+   color: inherit;
    box-sizing: border-box;
 }
 
