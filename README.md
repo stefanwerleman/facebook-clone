@@ -5,7 +5,7 @@
 #### Front-end
 * HTML/CSS/JavaScript
 * CSS Skeleton
-   * **Pending URL**
+   * https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css
 * NPM's **live-server** package
 * JavaScript's **Document Object Model**
 

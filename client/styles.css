@@ -1,0 +1,88 @@
+.header-container
+{
+   font-family: inherit;
+   background-color: #4267B2;
+   text-align: center;
+   position: fixed;
+   width: 100%;
+   z-index: 1;
+   top: 0px;
+   left: 0px;
+}
+
+.title
+{
+   color: white;
+   background-color: #4267B2;
+   font-size: 1.4em;
+   margin-top: 15px;
+   display: inline-block;
+   padding: 5px;
+}
+
+.form-container
+{
+   padding: 10px;
+   position: fixed;
+   width: 30%;
+   height: 50%;
+   top: 12%;
+   border: 1px solid #dddfe2;
+   border-radius: 4px;
+   background-color: #f5f6f7;
+   font-family: inherit;
+}
+
+.fields
+{
+   width: 100%;
+   height: 50%;
+   box-sizing: border-box;
+}
+
+.submit
+{
+   box-sizing: border-box;
+}
+
+form label
+{
+   box-sizing: border-box;
+}
+
+.github-container
+{
+   position: fixed;
+   top: 67%;
+   padding: 10px;
+   border: 1px solid #dddfe2;
+   border-radius: 4px;
+   background-color: #f5f6f7;
+   font-family: inherit;
+   width: 30%;
+   text-align: center;
+   font-size: 2.3em
+}
+
+.github-container ul
+{
+   margin-top: 25px;
+   white-space: nowrap;
+}
+
+.github-container li
+{
+   width: 25%;
+   display: inline-block;
+}
+
+.github-icon
+{
+   width: 25%;
+}
+
+.github-link
+{
+   color: inherit;
+   text-decoration: none;
+}

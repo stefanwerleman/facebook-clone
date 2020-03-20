@@ -3,10 +3,36 @@
    <head>
       <meta charset="utf-8">
       <title>My Facebook Clone</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+      <link rel="stylesheet" href="./styles.css">
    </head>
    <body>
-      <header>
-         <h3>My Facebook Clone</h3>
+      <header class="header-container">
+         <h2 class="title">My Facebook Clone</h2>
       </header>
+
+      <form class="form-container">
+         <label for="name">Name:</label>
+         <input class="fields" type="text" name="name" id="name">
+
+
+         <label for="comment">Comment:</label>
+         <textarea class="fields" name="comment" id="comment" placeholder="What's on your mind?"></textarea>
+
+         <br>
+
+         <input class="submit" type="submit" name="submit" id="submit" value="Post">
+      </form>
+
+      <div class="github-container">
+         <ul>
+            <li>
+               <img class="github-icon" src="./Media/github-logo.svg" alt="logo">
+               <a class="github-link" id="link" href="https://github.com/stefanwerleman/facebook-clone">GitHub</a>
+            </li>
+         </ul>
+      </div>
    </body>
+
+   <script type="text/javascript" src="./client.js"></script>
 </html>
