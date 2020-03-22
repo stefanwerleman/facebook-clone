@@ -14,6 +14,7 @@
    * **NodeJS** and **ExpressJS**
 * database
    * **MongoDB** (No SQL)
+   * **Mongoose** for connection
 
 # How to run the app:
 
