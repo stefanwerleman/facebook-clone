@@ -63,28 +63,22 @@ form label
    border-radius: 4px;
    background-color: #f5f6f7;
    font-family: inherit;
-   width: 100%;
    font-size: 2.3em;
-   text-align: center;
-   box-sizing: border-box;
    margin-bottom: 10px;
-   display: inline-block;
+   padding: 10px;
+   text-align: center;
 }
 
 .github-icon
 {
-   width: 6.75%;
+   margin-top: 5px;
+   width: 15%;
 }
 
 .linkedin-icon
 {
-   width: 9%;
-}
-
-.github-link, .linkedin-link
-{
-   color: inherit;
-   text-decoration: none;
+   margin-top: 5px;
+   width: 15%;
 }
 
 /* Middle column section */
@@ -116,21 +110,31 @@ form label
 
 .date-time
 {
+   position: absolute;
+   left: 74%;
+}
+
+.date-time
+{
    font-size: 0.9em;
    color: #606770;
 }
 
-/* Search column */
-.search-container
+/* Right column */
+.right-section
 {
    position: fixed;
    display: inline-block;
    font-family: inherit;
-   border: 1px solid #dddfe2;
-   border-radius: 4px;
    top: 12%;
    left: 66.5%;
    width: 31.75%;
+}
+
+.search-container
+{
+   border: 1px solid #dddfe2;
+   border-radius: 4px;
    padding: 10px;
    background-color: #f5f6f7;
 }
@@ -138,5 +142,17 @@ form label
 .search
 {
    width: 100%;
-   height: 100%;
+}
+
+.ucf-logo-container
+{
+   position: absolute;
+}
+
+.ucf-logo
+{
+   position: relative;
+   width: 50%;
+   top: 140px;
+   left: 125px;
 }
