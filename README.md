@@ -18,3 +18,18 @@
 # How to run the app:
 
 # Features:
+#### Search
+* Can search for posts by date and time, name, or any text that are contained within a post.
+
+#### Timeline
+* Contains all the messages within the chat room.
+
+#### Links
+* UCF website Link
+   * https://www.ucf.edu/
+* GitHub Repository link
+* LinkedIn Profile link
+   * https://linkedin.com/in/stefan-werleman
+
+#### New Post Form
+* Create a post with a facebook handle
