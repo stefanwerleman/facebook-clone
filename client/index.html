@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
-      <meta charset="utf-8">
+      <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
       <title>My Facebook Clone</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
       <link rel="stylesheet" href="./styles.css">
@@ -12,7 +12,7 @@
       </header>
 
       <section class="left-section">
-         <form class="form-container">
+         <form id="newpost-form" class="form-container">
             <label for="handle">Handle:</label>
             <input class="fields" type="text" name="handle" id="handle" placeholder="@markzuckerberg" required>
 
@@ -120,7 +120,7 @@
       <section class="right-section">
          <section class="search-container">
             <label for="search">Search:</label>
-            <input type="search" id="search" class="search" name="search" placeholder="Name, Caption, or Time.">
+            <input type="search" id="search" onchange="search()" class="search" name="search" placeholder="Name, Caption, or Time.">
          </section>
 
          <a class="ucf-logo-container" href="https://www.ucf.edu/" target="_blank">
