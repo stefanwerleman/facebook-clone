@@ -21,7 +21,10 @@
    padding: 5px;
 }
 
-/* left column section*/
+/*
+   left column section
+   Form and image links
+*/
 .left-section
 {
    display: inline-block;
@@ -112,10 +115,6 @@ form label
 {
    position: absolute;
    left: 74%;
-}
-
-.date-time
-{
    font-size: 0.9em;
    color: #606770;
 }
@@ -155,4 +154,81 @@ form label
    width: 50%;
    top: 140px;
    left: 125px;
+}
+
+/* Psuedo Classes */
+.submit:hover
+{
+   background-color: #dddfe2;
+}
+
+input:hover, textarea:hover
+{
+   border-color: #4267B2;
+}
+
+img:hover
+{
+   background-color: #e8e9eb;
+   border: 1px solid #dddfe2;
+   border-radius: 10px;
+}
+
+/* Responsiveness */
+
+/* Desktop Viewport */
+@media screen and (min-width: 1295px)
+{
+   .date-time
+   {
+      left: 69%;
+   }
+}
+
+@media screen and (min-width: 1215px)
+{
+   .date-time
+   {
+      left: 67%;
+   }
+}
+
+@media screen and (min-width: 1129px)
+{
+   .date-time
+   {
+      left: 65%;
+   }
+}
+
+@media screen and (min-width: 1024px)
+{
+   .date-time
+   {
+      left: 60%;
+   }
+
+   .ucf-logo
+   {
+      left: 25%;
+   }
+}
+
+/* iPad Pro Viewport */
+/* Portrait */
+@media (min-width: 1024px) and (min-height: 1366px)
+{
+   .left-section, .timeline-container, .right-section
+   {
+      top: 6%;
+   }
+}
+
+/* Landscape */
+@media (min-width: 1366px) and (min-height: 1024px)
+{
+   .left-section, .timeline-container, .right-section
+   {
+      top: 8%;
+   }
 }
