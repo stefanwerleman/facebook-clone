@@ -103,7 +103,11 @@ form label
    border-radius: 4px;
    padding: 10px;
    margin-bottom: 6px;
-   box-sizing: border-box;
+}
+
+.post-content
+{
+   word-wrap: break-word;
 }
 
 ul label

@@ -12,9 +12,7 @@ newPostForm.addEventListener("submit", function(event)
    if (handle[0] != '@')
    {
       var prefix = '@';
-
       prefix += handle;
-
       handle = prefix;
    }
 
