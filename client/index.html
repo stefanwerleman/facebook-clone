@@ -14,14 +14,14 @@
       <section class="left-section">
          <form id="newpost-form" class="form-container">
             <label for="handle">Handle:</label>
-            <input class="fields" type="text" name="handle" id="handle" placeholder="@markzuckerberg" required>
+            <input class="fields" type="text" id="handle" placeholder="@markzuckerberg" required>
 
 
-            <label for="comment">Comment:</label>
-            <textarea class="fields" name="comment" id="comment" placeholder="What's on your mind?" required></textarea>
+            <label for="message">Message:</label>
+            <textarea class="fields" id="message" placeholder="What's on your mind?" required></textarea>
             <br>
 
-            <input class="submit" type="submit" name="submit" id="submit" value="Post">
+            <input class="submit" type="submit" id="submit" value="Post">
          </form>
 
          <div class="github-container">
@@ -37,90 +37,14 @@
          </div>
       </section>
 
-      <ul class="timeline-container">
-
-         <!-- TODO: We'll start off with multiple divs but will apply this using javascript -->
-         <li class="post-container">
-            <div class="handle-section">
-               <span><label>@markzuckerberg</label></span>
-
-               <!-- TODO: Will javascript to create and style the date and time later -->
-               <span class="date-time"><p>March 12 at 1:51pm</p></span>
-            </div>
-
-            <p class="post-content">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-               ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-               culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-
-         <li class="post-container">
-            <div class="handle-section">
-               <span><label>@markzuckerberg</label></span>
-               <span class="date-time"><p>March 12 at 1:51pm</p></span>
-            </div>
-
-            <p class="post-content">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-               ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-               culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-
-         <li class="post-container">
-            <div class="handle-section">
-               <span><label>@markzuckerberg</label></span>
-               <span class="date-time"><p>March 12 at 1:51pm</p></span>
-            </div>
-
-            <p class="post-content">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-               ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-               culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-
-         <li class="post-container">
-            <div class="handle-section">
-               <span><label>@markzuckerberg</label></span>
-               <span class="date-time"><p>March 12 at 1:51pm</p></span>
-            </div>
-
-            <p class="post-content">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-               ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-               culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-         <li class="post-container">
-            <div class="handle-section">
-               <span><label>@markzuckerberg</label></span>
-               <span class="date-time"><p>March 12 at 1:51pm</p></span>
-            </div>
-
-            <p class="post-content">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-               ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-               culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li >
+      <ul id="timeline-container" class="timeline-container">
+         <!-- JS Will place elements here -->
       </ul>
 
       <section class="right-section">
          <section class="search-container">
             <label for="search">Search:</label>
-            <input type="search" id="search" onchange="search()" class="search" name="search" placeholder="Name, Caption, or Time.">
+            <input type="search" id="search" class="search" name="search" placeholder="Name, Caption, or Time.">
          </section>
 
          <a class="ucf-logo-container" href="https://www.ucf.edu/" target="_blank">
