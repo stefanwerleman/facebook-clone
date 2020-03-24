@@ -9,6 +9,15 @@ newPostForm.addEventListener("submit", function(event)
    var handle = newPostForm.querySelector("#handle").value;
    var message = newPostForm.querySelector("#message").value;
 
+   if (handle[0] != '@')
+   {
+      var prefix = '@';
+
+      prefix += handle;
+
+      handle = prefix;
+   }
+
    // New post object
    var newpost =
    {
@@ -33,9 +42,22 @@ function addPost(newpost)
    var handle = document.createElement("label");
    handle.textContent = newpost.handle;
 
+   // Setting up date and time
    var date = document.createElement("p");
    date.classList.add("date-time");
-   date.textContent = newpost.date;
+
+   var months = ["Jan", "Feb", "Mar", "Apr",
+                 "May", "Jun", "Jul", "Aug",
+                 "Sep", "Oct", "Nov", "Dec"];
+
+
+   var time = months[newpost.date.getMonth()];
+   time += " ";
+   time += newpost.date.getDate().toLocaleString();
+   time += " at ";
+   time += newpost.date.toLocaleTimeString("en-US", {hour: '2-digit', minute: '2-digit'});
+
+   date.textContent = time;
 
    var message = document.createElement("p");
    message.classList.add("post-content");
