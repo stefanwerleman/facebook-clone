@@ -38,9 +38,11 @@ function addPost(newpost)
 
    var newspan = document.createElement("span");
    var handle = document.createElement("label");
+   handle.setAttribute("id", "user");
    handle.textContent = newpost.handle;
 
    // Setting up date and time
+   // Ex) Mar 21 at 1:21 PM
    var date = document.createElement("p");
    date.classList.add("date-time");
 
@@ -76,3 +78,12 @@ function addPost(newpost)
 
 // Search filter
 const searchFilter = document.querySelector("#search");
+
+searchFilter.addEventListener("keyup", function(e)
+{
+   var term = e.target.value.toLowerCase();
+
+   var users = document.querySelectorAll("#user");
+
+
+});
