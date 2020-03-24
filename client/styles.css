@@ -106,15 +106,16 @@ form label
    box-sizing: border-box;
 }
 
-.handle-section span
+ul label
 {
-   display: inline-block;
+   display: inline;
 }
 
 .date-time
 {
+   display: inline;
+   left: 72.5%;
    position: absolute;
-   left: 74%;
    font-size: 0.9em;
    color: #606770;
 }
@@ -175,37 +176,20 @@ img:hover
 }
 
 /* Responsiveness */
-
 /* Desktop Viewport */
-@media screen and (min-width: 1295px)
+@media screen and (max-width: 1295px)
 {
    .date-time
    {
-      left: 69%;
+      left: 66.5%;
    }
 }
 
-@media screen and (min-width: 1215px)
+@media screen and (max-width: 1024px)
 {
    .date-time
    {
-      left: 67%;
-   }
-}
-
-@media screen and (min-width: 1129px)
-{
-   .date-time
-   {
-      left: 65%;
-   }
-}
-
-@media screen and (min-width: 1024px)
-{
-   .date-time
-   {
-      left: 60%;
+      left: 56.5%;
    }
 
    .ucf-logo
