@@ -27,6 +27,8 @@ newPostForm.addEventListener("submit", function(event)
    // POST Request
 
    addPost(newpost);
+
+   newPostForm.reset();
 });
 
 // Create New post
@@ -81,6 +83,10 @@ function addPost(newpost)
 // Search filter
 const searchFilter = document.querySelector("#search");
 
+const clearButton = shadowRoot.querySelector("#shadow-root");
+
+console.log(clearButton);
+
 searchFilter.addEventListener("keyup", function(e)
 {
    var term = e.target.value.toLowerCase();
@@ -103,7 +109,5 @@ searchFilter.addEventListener("keyup", function(e)
       {
          post.style.display = "none";
       }
-
    });
-
 });
