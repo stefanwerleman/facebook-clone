@@ -83,10 +83,6 @@ function addPost(newpost)
 // Search filter
 const searchFilter = document.querySelector("#search");
 
-const clearButton = shadowRoot.querySelector("#shadow-root");
-
-console.log(clearButton);
-
 searchFilter.addEventListener("keyup", function(e)
 {
    var term = e.target.value.toLowerCase();
