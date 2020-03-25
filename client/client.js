@@ -44,6 +44,7 @@ function addPost(newpost)
    // Setting up date and time
    // Ex) Mar 21 at 1:21 PM
    var date = document.createElement("p");
+   date.setAttribute("id", "date");
    date.classList.add("date-time");
 
    var months = ["Jan", "Feb", "Mar", "Apr",
@@ -60,6 +61,7 @@ function addPost(newpost)
    date.textContent = time;
 
    var message = document.createElement("p");
+   message.setAttribute("id", "message");
    message.classList.add("post-content");
    message.textContent = newpost.message;
 
@@ -82,8 +84,26 @@ const searchFilter = document.querySelector("#search");
 searchFilter.addEventListener("keyup", function(e)
 {
    var term = e.target.value.toLowerCase();
+   var posts = document.querySelectorAll(".post-container");
 
-   var users = document.querySelectorAll("#user");
+   // TODO: Will optimize later
+   posts.forEach(function(post)
+   {
+      var user = post.querySelector("#user");
+      var date = post.querySelector("#date");
+      var message = post.querySelector("#message");
 
+      if (user.textContent.toLowerCase().indexOf(term) != -1 ||
+          date.textContent.toLowerCase().indexOf(term) != -1 ||
+          message.textContent.toLowerCase().indexOf(term) != -1)
+      {
+         post.style.display = "block";
+      }
+      else
+      {
+         post.style.display = "none";
+      }
+
+   });
 
 });
