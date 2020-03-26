@@ -12,6 +12,7 @@
 #### Back-end
 * Server
    * **NodeJS** and **ExpressJS**
+   * Middleware **morgan** to logging incoming requests in order to debug
 * database
    * **MongoDB** (No SQL)
    * **Mongoose** for connection
