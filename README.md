@@ -13,6 +13,7 @@
 * Server
    * **NodeJS** and **ExpressJS**
    * Middleware **morgan** to logging incoming requests in order to debug
+   * **Nodemon** to run server
 * database
    * **MongoDB** (No SQL)
    * **Mongoose** for connection
