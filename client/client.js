@@ -44,6 +44,20 @@ newPostForm.addEventListener("submit", function(event)
    newPostForm.reset();
 });
 
+// Gets all the post when page loads up.
+function getAllPosts()
+{
+   fetch(API_URL + "/")
+      .then(respnse => response.json())
+      .then(function(posts)
+      {
+         posts.forEach(function(post)
+         {
+            console.log(post);
+         });
+      });
+}
+
 // Create New post
 function addPost(newpost)
 {
