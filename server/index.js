@@ -1,6 +1,9 @@
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
+
+app.use(cors());
 
 // GET Request:
 app.get("/", function(req, res)
@@ -10,8 +13,9 @@ app.get("/", function(req, res)
 
    res.json(
    {
-      username: "@stefanwerleman",
-      message: "This is a dummy post 😝"
+      handle: "@stefanwerleman",
+      message: "This is a dummy post 😝",
+      date: new Date()
    });
 });
 
