@@ -21,6 +21,7 @@ app.get("/", function(req, res)
    });
 });
 
+// Form validation
 function isValidPost(post)
 {
    // Checks if there is a handle
@@ -37,7 +38,6 @@ function isValidPost(post)
 // Post request for new posts
 app.post("/post", function(req, res)
 {
-   // Form validation
    if (isValidPost(req.body))
    {
       var newpost =
