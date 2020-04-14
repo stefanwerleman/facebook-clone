@@ -1,6 +1,9 @@
 // Form Handling
 const newPostForm = document.forms["newpost-form"];
 
+// API URL
+const API_URL = "http://localhost:5000";
+
 newPostForm.addEventListener("submit", function(event)
 {
    event.preventDefault();
@@ -25,6 +28,16 @@ newPostForm.addEventListener("submit", function(event)
    };
 
    // POST Request
+   fetch(API_URL + "/post",
+   {
+      method: "POST",
+      body: JSON.stringify(newpost),
+      headers:
+      {
+         "content-type": "application/json"
+      }
+   });
+
 
    addPost(newpost);
 
