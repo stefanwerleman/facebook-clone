@@ -53,7 +53,7 @@ function getAllPosts()
       .then(response => response.json())
       .then(function(post)
       {
-         console.log(post);
+         addPost(post);
       });
 }
 
@@ -79,12 +79,13 @@ function addPost(newpost)
                  "May", "Jun", "Jul", "Aug",
                  "Sep", "Oct", "Nov", "Dec"];
 
+   var postDate = new Date(newpost.date);
 
-   var time = months[newpost.date.getMonth()];
+   var time = months[postDate.getMonth()];
    time += " ";
-   time += newpost.date.getDate().toLocaleString();
+   time += postDate.getDate().toLocaleString();
    time += " at ";
-   time += newpost.date.toLocaleTimeString("en-US", {hour: '2-digit', minute: '2-digit'});
+   time += postDate.toLocaleTimeString("en-US", {hour: '2-digit', minute: '2-digit'});
 
    date.textContent = time;
 
