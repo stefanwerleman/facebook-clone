@@ -15,9 +15,9 @@ app.get("/posts", function(req, res)
 {
    var post =
    {
-      "handle": "@stefan",
-      "message": "hello",
-      "date": new Date().toString()
+      handle: "@stefan",
+      message: "hello 😝",
+      date: new Date()
    }
 
    // Client receives this
