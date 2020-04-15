@@ -2,23 +2,35 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-
 app.use(cors());
 
 // Any JSON will be parsed
 app.use(express.json());
 
+// This will be a dummy file with JSON obects
+// const posts = require("");
+
 // GET Request:
-app.get("/", function(req, res)
+app.get("/posts", function(req, res)
 {
+   var post =
+   {
+      "handle": "@stefan",
+      "message": "hello",
+      "date": new Date().toString()
+   }
+
+   // Client receives this
+   res.json(post);
+
    // TODO: Should load all posts
    // TODO: Do it in streams for efficiency
-   res.json(
-   {
-      handle: "@stefanwerleman",
-      message: "This is a dummy post 😝",
-      date: new Date()
-   });
+   // res.json(
+   // {
+   //    handle: "@stefanwerleman",
+   //    message: "This is a dummy post 😝",
+   //    date: new Date()
+   // });
 });
 
 // Form validation
