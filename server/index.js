@@ -8,29 +8,16 @@ app.use(cors());
 app.use(express.json());
 
 // This will be a dummy file with JSON obects
-// const posts = require("");
+// TODO: Once database is set up, extract from db
+const data = require("./FakeData/Posts.js");
+const posts = data.posts;
+
 
 // GET Request:
 app.get("/posts", function(req, res)
 {
-   var post =
-   {
-      handle: "@stefan",
-      message: "hello 😝",
-      date: new Date()
-   }
-
-   // Client receives this
-   res.json(post);
-
-   // TODO: Should load all posts
-   // TODO: Do it in streams for efficiency
-   // res.json(
-   // {
-   //    handle: "@stefanwerleman",
-   //    message: "This is a dummy post 😝",
-   //    date: new Date()
-   // });
+   // Sends all posts to client
+   res.json(posts);
 });
 
 // Form validation
@@ -59,7 +46,8 @@ app.post("/post", function(req, res)
          date: req.body.date.toString()
       }
 
-      console.log(newpost);
+      // Ok status
+      res.json({ status: 200 });
    }
    else
    {

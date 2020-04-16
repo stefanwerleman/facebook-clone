@@ -38,12 +38,18 @@ newPostForm.addEventListener("submit", function(event)
       {
          "content-type": "application/json"
       }
+   }).then(function(response)
+   {
+      if (!response.ok)
+      {
+         console.log("Something went wrong!!");
+         return;
+      }
+   }).then(function()
+   {
+      addPost(newpost);
+      newPostForm.reset();
    });
-
-
-   addPost(newpost);
-
-   newPostForm.reset();
 });
 
 // Gets all the post when page loads up.
@@ -51,9 +57,12 @@ function getAllPosts()
 {
    fetch(API_URL + "/posts")
       .then(response => response.json())
-      .then(function(post)
+      .then(function(posts)
       {
-         addPost(post);
+         posts.forEach(function(post)
+         {
+            addPost(post);
+         });
       });
 }
 
@@ -104,7 +113,7 @@ function addPost(newpost)
    var timeline = document.querySelector("#timeline-container");
 
    // Adding new element
-   timeline.appendChild(newli);
+   timeline.prepend(newli);
 }
 
 // Search filter
