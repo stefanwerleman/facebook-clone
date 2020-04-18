@@ -2,19 +2,18 @@
 .header-container
 {
    font-family: inherit;
-   background-color: #4267B2;
+   background-color: #6376CC;
    text-align: center;
    position: fixed;
    width: 100%;
-   z-index: 1;
    top: 0px;
    left: 0px;
+   z-index: 1;
 }
 
 .title
 {
    color: white;
-   background-color: #4267B2;
    font-size: 1.4em;
    margin-top: 15px;
    display: inline-block;
@@ -89,7 +88,6 @@ form label
 {
    display: inline-block;
    position: absolute;
-   background-color: white;
    width: 33%;
    font-family: inherit;
    top: 12%;
@@ -99,6 +97,7 @@ form label
 .post-container
 {
    display: block;
+   background-color: white;
    border: 1px solid #dddfe2;
    border-radius: 4px;
    padding: 10px;
