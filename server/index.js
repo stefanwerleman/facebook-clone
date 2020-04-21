@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const Post = require("./models/Post.js");
 
 const app = express();
 app.use(cors());
@@ -33,6 +34,7 @@ app.get("/posts", function(req, res)
 
 });
 
+
 // Form validation
 function isValidPost(post)
 {
@@ -52,12 +54,18 @@ app.post("/post", function(req, res)
 {
    if (isValidPost(req.body))
    {
-      var newpost =
+      var newpost = new Post(
       {
          handle: req.body.handle.toString(),
          message: req.body.message.toString(),
          date: req.body.date.toString()
-      }
+      });
+
+      // Save into DB
+      newpost.save().then(function(err, doc)
+      {
+         console.log(newpost.isNew);
+      });
 
       // Ok status
       res.json({ status: 200 });

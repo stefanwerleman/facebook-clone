@@ -6,7 +6,7 @@ const PostSchema = new Schema(
 {
    handle: String,
    message: String,
-   date: Date
+   date: String
 });
 
 // Post Model
