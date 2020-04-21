@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const mongoose = require("mongoose");
 
 const app = express();
 app.use(cors());
@@ -7,17 +8,29 @@ app.use(cors());
 // Any JSON will be parsed
 app.use(express.json());
 
-// This will be a dummy file with JSON obects
-// TODO: Once database is set up, extract from db
-const data = require("./FakeData/Posts.js");
-const posts = data.posts;
+// Connect to database
+mongoose.connect("mongodb://localhost/facebookClone",
+{
+   useNewUrlParser: true,
+   useUnifiedTopology: true
+});
 
+// Verify connection
+mongoose.connection.once("open", function()
+{
+   // Successful Connection
+   console.log("Connected to Database");
+}).on("error", function(error)
+{
+   // Unsuccessful Connection
+   console.log("Connection error:", error);
+});
 
 // GET Request:
 app.get("/posts", function(req, res)
 {
    // Sends all posts to client
-   res.json(posts);
+
 });
 
 // Form validation
