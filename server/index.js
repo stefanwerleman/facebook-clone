@@ -28,11 +28,11 @@ mongoose.connection.once("open", function()
 });
 
 // GET Request:
-app.get("/posts", function(req, res)
-{
-   // Sends all posts to client
-
-});
+// app.get("/posts", function(req, res)
+// {
+//    // Sends all posts to client
+//
+// });
 
 
 // Form validation
@@ -64,7 +64,14 @@ app.post("/post", function(req, res)
       // Save into DB
       newpost.save().then(function(err, doc)
       {
-         console.log(newpost.isNew);
+         if (err)
+         {
+            console.log("Something went wrong");
+         }
+         else
+         {
+            console.log("success");
+         }
       });
 
       // Ok status
