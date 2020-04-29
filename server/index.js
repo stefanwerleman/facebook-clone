@@ -54,28 +54,22 @@ app.post("/post", function(req, res)
 {
    if (isValidPost(req.body))
    {
-      var newpost = new Post(
-      {
-         handle: req.body.handle.toString(),
-         message: req.body.message.toString(),
-         date: req.body.date.toString()
-      });
+      const data = req.body;
+
+      var newpost = new Post(data);
 
       // Save into DB
-      newpost.save().then(function(err, doc)
+      newpost.save(function(err, doc)
       {
          if (err)
          {
-            console.log("Something went wrong");
+            res.json({ status: 500, message: "Internal Server Error." });
          }
          else
          {
-            console.log("success");
+            res.json({ status: 200, message: "Successfully saved data" });
          }
       });
-
-      // Ok status
-      res.json({ status: 200 });
    }
    else
    {
