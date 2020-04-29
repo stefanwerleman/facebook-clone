@@ -27,13 +27,13 @@ mongoose.connection.once("open", function()
    console.log("Connection error:", error);
 });
 
-// GET Request:
-// app.get("/posts", function(req, res)
-// {
-//    // Sends all posts to client
-//
-// });
+// Get all current posts once the browser loads
+app.get("/posts", function(req, res)
+{
+   // Sends all posts to client
+   
 
+});
 
 // Form validation
 function isValidPost(post)
