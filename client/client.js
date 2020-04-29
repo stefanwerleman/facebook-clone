@@ -4,7 +4,7 @@ const newPostForm = document.forms["newpost-form"];
 // API URL
 const API_URL = "http://localhost:5000";
 
-// getAllPosts();
+getAllPosts();
 
 newPostForm.addEventListener("submit", function(event)
 {
@@ -53,18 +53,18 @@ newPostForm.addEventListener("submit", function(event)
 });
 
 // Gets all the post when page loads up.
-// function getAllPosts()
-// {
-//    fetch(API_URL + "/posts")
-//       .then(response => response.json())
-//       .then(function(posts)
-//       {
-//          posts.forEach(function(post)
-//          {
-//             addPost(post);
-//          });
-//       });
-// }
+function getAllPosts()
+{
+   fetch(API_URL + "/posts")
+      .then(response => response.json())
+      .then(function(posts)
+      {
+         posts.forEach(function(post)
+         {
+            addPost(post);
+         });
+      });
+}
 
 // Create New post
 function addPost(newpost)
