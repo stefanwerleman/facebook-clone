@@ -88,7 +88,7 @@ form label
 {
    display: inline-block;
    position: absolute;
-   width: 33%;
+   width: 34.25%;
    font-family: inherit;
    top: 12%;
    left: 33%;
@@ -130,7 +130,7 @@ ul label
    display: inline-block;
    font-family: inherit;
    top: 12%;
-   left: 66.5%;
+   left: 67.7%;
    width: 31.75%;
 }
 
@@ -179,7 +179,7 @@ ul label
 {
    position: relative;
    width: 50%;
-   top: 120px;
+   top: 85px;
    left: 125px;
 }
 
