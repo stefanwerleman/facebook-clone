@@ -31,8 +31,17 @@ mongoose.connection.once("open", function()
 app.get("/posts", function(req, res)
 {
    // Sends all posts to client
-   
-
+   Post.find({}, function(err, posts)
+   {
+      if (err)
+      {
+         res.json({ status: 500, message: "Failed to get all posts"})
+      }
+      else
+      {
+         res.json(posts);
+      }
+   });
 });
 
 // Form validation
