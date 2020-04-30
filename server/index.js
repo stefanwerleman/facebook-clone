@@ -27,6 +27,22 @@ mongoose.connection.once("open", function()
    console.log("Connection error:", error);
 });
 
+// Clearing all posts everday at midnight
+app.delete("/clear", function(req, res)
+{
+   Post.remove({}, function(err)
+   {
+      if (err)
+      {
+         res.json({ status: 500, message: "Failed to clear chat" });
+      }
+      else
+      {
+         res.json({ status: 200, message: "Success" });
+      }
+   });
+});
+
 // Get all current posts once the browser loads
 app.get("/posts", function(req, res)
 {
@@ -35,7 +51,7 @@ app.get("/posts", function(req, res)
    {
       if (err)
       {
-         res.json({ status: 500, message: "Failed to get all posts"})
+         res.json({ status: 500, message: "Failed to get all posts" })
       }
       else
       {

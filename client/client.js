@@ -1,10 +1,48 @@
+const expiration = new Date();
+expiration.setHours("24");
+expiration.setMinutes("00");
+expiration.setSeconds("00");
+
 // Form Handling
 const newPostForm = document.forms["newpost-form"];
 
 // API URL
 const API_URL = "http://localhost:5000";
 
+// When the page initially loads up
 getAllPosts();
+
+// The chat will clear everyday at midnight
+var timer = setInterval(function()
+{
+   // Current date
+   var now = new Date();
+
+   if ((now.getHours() === expiration.getHours()) &&
+       (now.getMinutes() === expiration.getMinutes()) &&
+       (now.getSeconds() === expiration.getSeconds()))
+   {
+      clearChat();
+   }
+}, 1000);
+
+function clearChat()
+{
+   fetch(API_URL + "/clear", { method: "DELETE" })
+   .then(response => response.json())
+   .then(function(response)
+   {
+      if (response.status !== 200)
+      {
+         console.log("Could not clear chat");
+         return;
+      }
+      else
+      {
+         location.reload();
+      }
+   });
+}
 
 newPostForm.addEventListener("submit", function(event)
 {
