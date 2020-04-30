@@ -1,3 +1,4 @@
+// Expiration time is midnight
 const expiration = new Date();
 expiration.setHours("24");
 expiration.setMinutes("00");
@@ -18,6 +19,8 @@ var timer = setInterval(function()
    // Current date
    var now = new Date();
 
+   updateTimer(now);
+
    if ((now.getHours() === expiration.getHours()) &&
        (now.getMinutes() === expiration.getMinutes()) &&
        (now.getSeconds() === expiration.getSeconds()))
@@ -25,6 +28,18 @@ var timer = setInterval(function()
       clearChat();
    }
 }, 1000);
+
+// Getting time tags
+const hours = document.querySelector("#hours");
+const minutes = document.querySelector("#minutes");
+const seconds = document.querySelector("#seconds");
+
+function updateTimer(now)
+{
+   hours.textContent = (24 - now.getHours());
+   minutes.textContent = (60 - now.getMinutes());
+   seconds.textContent = (60 - now.getSeconds());
+}
 
 function clearChat()
 {
