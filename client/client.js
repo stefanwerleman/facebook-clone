@@ -37,37 +37,12 @@ const seconds = document.querySelector("#seconds");
 function updateTimer(now)
 {
    var h = 24 - now.getHours();
-
-   if (h < 10)
-   {
-      hours.textContent = ('0' + h.toString());
-   }
-   else
-   {
-      hours.textContent = h.toString();
-   }
-
    var m = 60 - now.getMinutes();
-
-   if (m < 10)
-   {
-      minutes.textContent = ('0' + m.toString());
-   }
-   else
-   {
-      minutes.textContent = m.toString();
-   }
-
    var s = 60 - now.getSeconds();
 
-   if (s < 10)
-   {
-      seconds.textContent = ('0' + s.toString());
-   }
-   else
-   {
-      seconds.textContent = s.toString();
-   }
+   hours.textContent = (h < 10) ? ('0' + h.toString()) : h.toString();
+   minutes.textContent = (m < 10) ? ('0' + m.toString()) : m.toString();
+   seconds.textContent = (s < 10) ? ('0' + s.toString()) : s.toString();
 }
 
 function clearChat()
