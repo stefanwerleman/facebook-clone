@@ -54,6 +54,7 @@ function clearChat()
       }
       else
       {
+         // Refreshes page to demontrate removal of all posts
          location.reload();
       }
    });
