@@ -2,6 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const Post = require("./models/Post.js");
+const Filter = require("bad-words");
+
+// Filter out any profanity
+const filter = new Filter();
 
 const app = express();
 app.use(cors());
@@ -60,11 +64,18 @@ app.get("/posts", function(req, res)
    });
 });
 
+// Flag if handle contains profanity.
+var isProfane;
+
 // Form validation
 function isValidPost(post)
 {
+   isProfane = filter.isProfane(post.handle.toString().trim());
+   if (isProfane)
+      return false
+
    // Checks if there is a handle
-   if (post.name && post.name.toString().trim() === "")
+   if (post.handle && post.handle.toString().trim() === "")
       return false;
 
    // Checks if a message exist
@@ -80,7 +91,6 @@ app.post("/post", function(req, res)
    if (isValidPost(req.body))
    {
       const data = req.body;
-
       var newpost = new Post(data);
 
       // Save into DB
@@ -88,22 +98,39 @@ app.post("/post", function(req, res)
       {
          if (err)
          {
-            res.json({ status: 500, message: "Internal Server Error." });
+            res.json({ status: 500, error: "(Internal Server Error)" });
          }
          else
          {
-            res.json({ status: 200, message: "Successfully saved data" });
+            res.json(
+            {
+               status: 200,
+               message: "Successfully Submitted",
+               post: filter.clean(newpost.message.toString().trim())
+            });
          }
       });
    }
    else
    {
-      // Unprocessable Entity
-      res.status(422);
-      res.json(
+      if (isProfane)
       {
-         message: "Invalid Inputs"
-      });
+         // Not acceptable
+         res.json(
+         {
+            status: 406,
+            error: "Handle Contains Profanity"
+         });
+      }
+      else
+      {
+         // Unprocessable Entity
+         res.json(
+         {
+            status: 422,
+            error: "Invalid Inputs"
+         });
+      }
    }
 });
 

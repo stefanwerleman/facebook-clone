@@ -1,3 +1,5 @@
+// Filter out any profanity
+
 // Expiration time is midnight
 const expiration = new Date();
 expiration.setHours("24");
@@ -96,17 +98,40 @@ newPostForm.addEventListener("submit", function(event)
       {
          "content-type": "application/json"
       }
-   }).then(function(response)
+   })
+   .then(function(response)
    {
-      if (!response.ok)
+      return response.json();
+   })
+   .then(function(response)
+   {
+      if (response.status !== 200)
       {
-         console.log("Something went wrong!!");
+         if (response.status === 500)
+         {
+            console.error(response.error);
+         }
+         else if (response.status === 422)
+         {
+            console.error(response.error);
+         }
+         else if (response.status === 406)
+         {
+            console.error(response.error);
+         }
+
          return;
       }
-   }).then(function()
-   {
-      addPost(newpost);
-      newPostForm.reset();
+      else
+      {
+         console.log(response.message);
+
+         // This could return post with filtered profanity
+         newpost.message = response.post;
+
+         addPost(newpost);
+         newPostForm.reset();
+      }
    });
 });
 
