@@ -15,7 +15,15 @@
       <section class="left-section">
          <form id="newpost-form" class="form-container">
             <label for="handle">Handle:</label>
-            <input class="fields" type="text" id="handle" placeholder="@markzuckerberg" required>
+            <input
+               class="fields"
+               type="text"
+               id="handle"
+               placeholder="@markzuckerberg"
+               pattern="[a-z][a-z0-9_-]+"
+               title="No leading numbers and all lowercase letters. Hyphens and underscores only allowed."
+               required
+            >
 
 
             <label for="message">Message:</label>
