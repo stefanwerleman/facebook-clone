@@ -148,7 +148,7 @@ function getAllPosts()
 }
 
 // Create New post
-function addPost(newpost)
+function addNewPost(newpost)
 {
    // Creating new post
    var newli = document.createElement("li");
@@ -205,7 +205,6 @@ searchFilter.addEventListener("keyup", function(e)
    var term = e.target.value.toLowerCase();
    var posts = document.querySelectorAll(".post-container");
 
-   // TODO: Will optimize later
    posts.forEach(function(post)
    {
       var user = post.querySelector("#user");

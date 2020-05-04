@@ -10,7 +10,5 @@
   "author": "Stefan Werleman",
   "license": "ISC",
   "dependencies": {},
-  "devDependencies": {
-    "jest": "^25.5.4"
-  }
+  "devDependencies": {}
 }
