@@ -1,5 +1,3 @@
-// Filter out any profanity
-
 // Expiration time is midnight
 const expiration = new Date();
 expiration.setHours("24");

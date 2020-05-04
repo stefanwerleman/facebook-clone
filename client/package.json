@@ -4,9 +4,13 @@
   "description": "",
   "main": "client.js",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server",
+    "test": "jest"
   },
   "author": "Stefan Werleman",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^25.5.4"
+  }
 }
