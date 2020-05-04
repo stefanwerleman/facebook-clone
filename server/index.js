@@ -71,6 +71,7 @@ var isProfane;
 function isValidPost(post)
 {
    isProfane = filter.isProfane(post.handle.toString().trim());
+   
    if (isProfane)
       return false
 
