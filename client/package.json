@@ -4,8 +4,7 @@
   "description": "",
   "main": "client.js",
   "scripts": {
-    "start": "live-server",
-    "test": "jest"
+    "start": "live-server"
   },
   "author": "Stefan Werleman",
   "license": "ISC",
