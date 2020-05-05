@@ -8,6 +8,8 @@
   },
   "author": "Stefan Werleman",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "now": "^18.0.0"
+  },
   "devDependencies": {}
 }
