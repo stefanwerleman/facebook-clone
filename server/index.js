@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const Post = require("./models/Post.js");
 const Filter = require("bad-words");
+require("dotenv").config();
 
 // Filter out any profanity
 const filter = new Filter();
@@ -17,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to database
-mongoose.connect("mongodb+srv://stefanwerleman:<password>@facebook-clone-b4egb.mongodb.net/test?retryWrites=true&w=majority",
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@facebook-clone-b4egb.mongodb.net/test?retryWrites=true&w=majority`,
 {
    useNewUrlParser: true,
    useUnifiedTopology: true
