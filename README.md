@@ -50,3 +50,9 @@
 * Create a post with a facebook handle
 
 # Deployment
+* Client
+   * With **now** CLI
+* Server
+   * With **now** CLI
+* Database
+   * With **now** CLI and **mlab**
