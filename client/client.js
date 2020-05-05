@@ -115,6 +115,7 @@ newPostForm.addEventListener("submit", function(event)
          }
          else if (response.status === 406)
          {
+            alert("Handle cannot have any bad words");
             console.error(response.error);
          }
 
