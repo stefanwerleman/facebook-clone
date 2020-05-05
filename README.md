@@ -15,6 +15,7 @@
    * Middleware **morgan** to logging incoming requests in order to debug
    * **Cors**
    * **Nodemon** to run server
+   * **bad-words** package to filter out profanity
 * database
    * **MongoDB** (No SQL)
    * **Mongoose** for connection
