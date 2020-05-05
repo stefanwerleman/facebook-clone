@@ -18,9 +18,19 @@
 * database
    * **MongoDB** (No SQL)
    * **Mongoose** for connection
+   * **Mocha** for testing purposes
 
 # How to run the app:
-
+(1) Via Command-line
+   (a) Make sure you have **live-server**, **mongodb**, and **nodejs** installed
+(2) Go to client folder
+   (a) run `npm start`
+(3) Go to server folder
+   (a) run `npm run dev`
+(4) To run testing:
+   (a) Go to server folder
+   (b) then run `npm test`
+   
 # Features:
 #### Search
 * Can search for posts by date and time, name, or any text that are contained within a post.
