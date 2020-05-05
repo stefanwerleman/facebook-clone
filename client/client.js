@@ -187,6 +187,7 @@ function addPost(newpost)
 
    date.textContent = time;
 
+   // Setting up message element
    var message = document.createElement("p");
    message.setAttribute("id", "message");
    message.classList.add("post-content");
