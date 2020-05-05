@@ -208,10 +208,12 @@ searchFilter.addEventListener("keyup", function(e)
 
    posts.forEach(function(post)
    {
+      // Getting contents you want to search for
       var user = post.querySelector("#user");
       var date = post.querySelector("#date");
       var message = post.querySelector("#message");
 
+      // Display if it matches search key
       if (user.textContent.toLowerCase().indexOf(term) != -1 ||
           date.textContent.toLowerCase().indexOf(term) != -1 ||
           message.textContent.toLowerCase().indexOf(term) != -1)
