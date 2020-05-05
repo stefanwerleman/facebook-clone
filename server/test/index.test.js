@@ -49,7 +49,7 @@ describe("All Database Insertion Operations", function()
       {
          handle: "@testhandle3",
          message: "test message #3",
-         data: new Date()
+         data: new Date().toString()
       };
 
       var post = new Post(newpost);
@@ -78,7 +78,7 @@ describe("Database Find Operation", function()
 
       Post.find({}, function(err, posts)
       {
-         assert.equals(n, posts.length());
+         assert.equals(posts.length(), n);
       });
 
       done();
