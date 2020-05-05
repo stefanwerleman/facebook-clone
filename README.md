@@ -55,4 +55,4 @@
 * Server
    * With **now** CLI
 * Database
-   * With **now** CLI and **mlab**
+   * With **now** CLI and **MongoAtlas**

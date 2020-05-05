@@ -7,6 +7,9 @@ const Filter = require("bad-words");
 // Filter out any profanity
 const filter = new Filter();
 
+// Port
+const PORT = 5000;
+
 const app = express();
 app.use(cors());
 
@@ -14,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to database
-mongoose.connect("mongodb://localhost/facebookClone",
+mongoose.connect("mongodb+srv://stefanwerleman:<password>@facebook-clone-b4egb.mongodb.net/test?retryWrites=true&w=majority",
 {
    useNewUrlParser: true,
    useUnifiedTopology: true
@@ -136,7 +139,7 @@ app.post("/post", function(req, res)
    }
 });
 
-app.listen(5000, function()
+app.listen(PORT, function()
 {
    console.log("Listening on http://localhost:5000");
 });

@@ -38,9 +38,9 @@ const seconds = document.querySelector("#seconds");
 // calculates how much time is left
 function updateTimer(now)
 {
-   var h = 24 - now.getHours();
-   var m = 60 - now.getMinutes();
-   var s = 60 - now.getSeconds();
+   var h = 23 - now.getHours();
+   var m = 59 - now.getMinutes();
+   var s = 59 - now.getSeconds();
 
    // Include leading zeros to time if necessary
    hours.textContent = (h < 10) ? ('0' + h.toString()) : h.toString();
