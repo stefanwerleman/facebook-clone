@@ -59,12 +59,13 @@ app.get("/posts", function(req, res)
       }
       else
       {
+         // Sending all posts to client
          res.json(posts);
       }
    });
 });
 
-// Flag if handle contains profanity.
+// Flag if handle contains any profanity.
 var isProfane;
 
 // Form validation
@@ -73,7 +74,7 @@ function isValidPost(post)
    isProfane = filter.isProfane(post.handle.toString().trim());
 
    if (isProfane)
-      return false
+      return false;
 
    // Checks if there is a handle
    if (post.handle && post.handle.toString().trim() === "")
