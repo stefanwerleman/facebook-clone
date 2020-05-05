@@ -21,16 +21,16 @@
    * **Mocha** for testing purposes
 
 # How to run the app:
-(1) Via Command-line
+(1) Via Command-line (2 command-line windows)
    (a) Make sure you have **live-server**, **mongodb**, and **nodejs** installed
 (2) Go to client folder
-   (a) run `npm start`
+   (a) run `npm start` on 1st command-line window
 (3) Go to server folder
-   (a) run `npm run dev`
+   (a) run `npm run dev` on 2nd command-line window
 (4) To run testing:
    (a) Go to server folder
    (b) then run `npm test`
-   
+
 # Features:
 #### Search
 * Can search for posts by date and time, name, or any text that are contained within a post.
