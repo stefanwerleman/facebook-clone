@@ -148,7 +148,7 @@ function getAllPosts()
 }
 
 // Create New post
-function addNewPost(newpost)
+function addPost(newpost)
 {
    // Creating new post
    var newli = document.createElement("li");

@@ -34,7 +34,7 @@ mongoose.connection.once("open", function()
 // Clearing all posts everday at midnight
 app.delete("/clear", function(req, res)
 {
-   Post.deleteMany({}, function(err)
+   Post.deleteMany({}, function(err, result)
    {
       if (err)
       {
