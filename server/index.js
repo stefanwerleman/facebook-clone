@@ -3,7 +3,10 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const Post = require("./models/Post.js");
 const Filter = require("bad-words");
-require("dotenv").config();
+// const dotenv = require("dotenv");
+// require("now-env");
+
+// dotenv.config();
 
 // Filter out any profanity
 const filter = new Filter();
@@ -16,9 +19,10 @@ app.use(cors());
 
 // Any JSON will be parsed
 app.use(express.json());
+// console.log(process.env.MONGODB_URI);
 
 // Connect to database
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@facebook-clone-b4egb.mongodb.net/test?retryWrites=true&w=majority`,
+mongoose.connect("mongodb://localhost/facebook-clone",
 {
    useNewUrlParser: true,
    useUnifiedTopology: true
@@ -29,10 +33,16 @@ mongoose.connection.once("open", function()
 {
    // Successful Connection
    console.log("Connected to Database");
-}).on("error", function(error)
+})
+.on("error", function(error)
 {
    // Unsuccessful Connection
    console.log("Connection error:", error);
+});
+
+app.get("/", function(req, res)
+{
+   res.json({ message: "Welcome :)" });
 });
 
 // Clearing all posts everday at midnight
@@ -64,6 +74,7 @@ app.get("/posts", function(req, res)
       else
       {
          // Sending all posts to client
+         res.status(500);
          res.json(posts);
       }
    });
@@ -139,6 +150,7 @@ app.post("/post", function(req, res)
       }
    }
 });
+
 
 app.listen(PORT, function()
 {
