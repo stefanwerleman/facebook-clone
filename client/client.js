@@ -21,6 +21,7 @@ var timer = setInterval(function()
 
    updateTimer(now);
 
+   // Checking if it's time to clear the chat (Midnight)
    if ((now.getHours() === expiration.getHours()) &&
        (now.getMinutes() === expiration.getMinutes()) &&
        (now.getSeconds() === expiration.getSeconds()))
@@ -34,12 +35,14 @@ const hours = document.querySelector("#hours");
 const minutes = document.querySelector("#minutes");
 const seconds = document.querySelector("#seconds");
 
+// calculates how much time is left
 function updateTimer(now)
 {
    var h = 24 - now.getHours();
    var m = 60 - now.getMinutes();
    var s = 60 - now.getSeconds();
 
+   // Include leading zeros to time if necessary
    hours.textContent = (h < 10) ? ('0' + h.toString()) : h.toString();
    minutes.textContent = (m < 10) ? ('0' + m.toString()) : m.toString();
    seconds.textContent = (s < 10) ? ('0' + s.toString()) : s.toString();
@@ -87,7 +90,7 @@ newPostForm.addEventListener("submit", function(event)
       date: new Date()
    };
 
-   // POST Request
+   // POST Request to /post route
    fetch(API_URL + "/post",
    {
       method: "POST",
@@ -105,16 +108,19 @@ newPostForm.addEventListener("submit", function(event)
    {
       if (response.status !== 200)
       {
+         // Internal server
          if (response.status === 500)
          {
             console.error(response.error);
          }
          else if (response.status === 422)
          {
+            // Unprocessable Entity
             console.error(response.error);
          }
          else if (response.status === 406)
          {
+            // Profanity
             alert("Handle cannot have any bad words");
             console.error(response.error);
          }
@@ -155,6 +161,7 @@ function addPost(newpost)
    var newli = document.createElement("li");
    newli.classList.add("post-container");
 
+   // Constructing Post elements
    var newspan = document.createElement("span");
    var handle = document.createElement("label");
    handle.setAttribute("id", "user");
@@ -194,7 +201,7 @@ function addPost(newpost)
    // Getting timeline list
    var timeline = document.querySelector("#timeline-container");
 
-   // Adding new element
+   // Adding new element to the DOM
    timeline.prepend(newli);
 }
 
