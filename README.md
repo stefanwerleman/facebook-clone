@@ -27,7 +27,7 @@
    * run `npm start` on 1st command-line window
 2. Go to server folder
    * run `npm run dev` on 2nd command-line window
-3. To run testing:
+3. To run testing (This can be on a 3rd command-line window):
    * Go to server folder
    * then run `npm test`
 
