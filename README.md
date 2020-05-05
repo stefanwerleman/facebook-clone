@@ -21,15 +21,15 @@
    * **Mocha** for testing purposes
 
 # How to run the app:
-(1) Via Command-line (2 command-line windows)
-   (a) Make sure you have **live-server**, **mongodb**, and **nodejs** installed
-(2) Go to client folder
-   (a) run `npm start` on 1st command-line window
-(3) Go to server folder
-   (a) run `npm run dev` on 2nd command-line window
-(4) To run testing:
-   (a) Go to server folder
-   (b) then run `npm test`
+#### Make sure you have you have all the necessary packages and frameworks from the back-end and front-end sections installed. Also make sure you have mongodb service is running and have 2 command-line windows opened to run the client and server separately.
+
+1. Go to client folder
+   * run `npm start` on 1st command-line window
+2. Go to server folder
+   * run `npm run dev` on 2nd command-line window
+3. To run testing:
+   * Go to server folder
+   * then run `npm test`
 
 # Features:
 #### Search
