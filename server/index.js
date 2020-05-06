@@ -3,10 +3,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const Post = require("./models/Post.js");
 const Filter = require("bad-words");
-// const dotenv = require("dotenv");
-// require("now-env");
+const dotenv = require("dotenv");
 
-// dotenv.config();
+dotenv.config();
 
 // Filter out any profanity
 const filter = new Filter();
@@ -19,10 +18,11 @@ app.use(cors());
 
 // Any JSON will be parsed
 app.use(express.json());
-// console.log(process.env.MONGODB_URI);
 
+
+// For localhost --> || "mongodb://localhost/facebook-clone"
 // Connect to database
-mongoose.connect("mongodb://localhost/facebook-clone",
+mongoose.connect(process.env.MONGODB_URI,
 {
    useNewUrlParser: true,
    useUnifiedTopology: true
