@@ -18,6 +18,16 @@
          "src": "/posts",
          "dest": "/index.js",
          "methods": ["GET"]
+      },
+      {
+         "src": "/clear",
+         "dest": "/index.js",
+         "methods": ["DELETE"]
+      },
+      {
+         "src": "/post",
+         "dest": "/index.js",
+         "methods": ["POST"]
       }
    ],
    "env":

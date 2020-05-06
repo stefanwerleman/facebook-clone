@@ -16,6 +16,8 @@ const PORT = 5000;
 const app = express();
 app.use(cors());
 
+app.enable("trust proxy");
+
 // Any JSON will be parsed
 app.use(express.json());
 
@@ -74,7 +76,7 @@ app.get("/posts", function(req, res)
       else
       {
          // Sending all posts to client
-         res.status(500);
+         res.status(200);
          res.json(posts);
       }
    });

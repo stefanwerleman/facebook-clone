@@ -8,7 +8,8 @@ expiration.setSeconds("00");
 const newPostForm = document.forms["newpost-form"];
 
 // API URL
-const API_URL = "http://localhost:5000";
+// const API_URL = (window.location.hostname === "localhost") ? "http://localhost:5000" : "https://facebook-clone-api.now.sh/";
+const API_URL = "https://facebook-clone-api.now.sh";
 
 // When the page initially loads up
 getAllPosts();
@@ -143,7 +144,7 @@ newPostForm.addEventListener("submit", function(event)
 // Gets all the post when page loads up.
 function getAllPosts()
 {
-   fetch(API_URL + "/posts")
+   fetch(API_URL + "/posts", { method: "GET" })
       .then(response => response.json())
       .then(function(posts)
       {

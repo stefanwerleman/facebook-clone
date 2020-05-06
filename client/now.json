@@ -1,0 +1,11 @@
+{
+   "name": "facebook-clone-sw",
+   "version": 2,
+   "builds":
+   [
+      {
+         "src": "*",
+         "use": "@now/static"
+      }
+   ]
+}
