@@ -49,6 +49,9 @@
 #### New Post Form
 * Create a post with a facebook handle
 
+#### Countdown
+* A simple countdown to midnight. This will clear the chat once it is midnight (Eastern Time).
+
 # Deployment
 * Client
    * With **now** CLI
